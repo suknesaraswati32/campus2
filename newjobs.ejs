@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Add Job</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+
+<!-- ✅ NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+
+<div class="container">
+
+<a class="navbar-brand logo" href="#">CampusHire</a>
+
+<div class="collapse navbar-collapse">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Jobs</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Applications</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+
+<!-- ✅ HERO SECTION -->
+
+<section class="hero">
+
+<div class="container text-center">
+
+<h1>Add New Job</h1>
+<p>Post new opportunities for students</p>
+
+</div>
+
+</section>
+
+
+<!-- ✅ FORM SECTION -->
+
+<section class="jobs-section">
+
+<div class="container d-flex justify-content-center">
+
+<div class="card shadow p-4" style="width: 600px;">
+
+<h4 class="mb-4 text-center">Job Details</h4>
+
+<form action="/jobs" method="POST">
+
+<!-- Job Title -->
+<div class="mb-3">
+<label class="form-label">Job Title</label>
+<input type="text" name="jobTitle" class="form-control" required>
+</div>
+
+<!-- Company ID -->
+<div class="mb-3">
+<label class="form-label">Company ID</label>
+<input type="text" name="company" class="form-control" placeholder="Enter Company ObjectId">
+</div>
+
+<!-- Package -->
+<div class="mb-3">
+<label class="form-label">Package (₹)</label>
+<input type="number" name="package" class="form-control">
+</div>
+
+<!-- Location -->
+<div class="mb-3">
+<label class="form-label">Location</label>
+<input type="text" name="location" class="form-control">
+</div>
+
+<!-- Required Skills -->
+<div class="mb-3">
+<label class="form-label">Required Skills</label>
+<input type="text" name="requiredSkills" class="form-control"
+placeholder="e.g. JavaScript, Node.js, MongoDB">
+<small class="text-muted">Enter skills separated by commas</small>
+</div>
+
+<!-- Minimum CGPA -->
+<div class="mb-3">
+<label class="form-label">Minimum CGPA</label>
+<input type="number" step="0.1" name="minimumCGPA" class="form-control">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Category</label>
+<select name="category" class="form-control" required>
+  <option value="">Select Category</option>
+  <option value="software">Software</option>
+  <option value="aiml">AI/ML</option>
+  <option value="devops">DevOps</option>
+  <option value="data">Data Science</option>
+  <option value="cloud">Cloud</option>
+</select>
+</div>
+
+<!-- Deadline -->
+<div class="mb-3">
+<label class="form-label">Application Deadline</label>
+<input type="date" name="deadline" class="form-control">
+</div>
+
+<!-- Submit Button -->
+<button class="btn btn-skyblue w-100 mt-3">Add Job</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ✅ FOOTER -->
+
+<footer class="footer mt-5">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-4">
+<h5>CampusHire</h5>
+<p>Connecting students with top companies for campus placements.</p>
+</div>
+
+<div class="col-md-4">
+<h5>Quick Links</h5>
+<ul>
+<li>Dashboard</li>
+<li>Jobs</li>
+<li>Applications</li>
+<li>Profile</li>
+</ul>
+</div>
+
+<div class="col-md-4">
+<h5>Contact</h5>
+<p>Email: support@campushire.com</p>
+<p>Phone: +91 9876543210</p>
+</div>
+
+</div>
+
+<hr>
+
+<p class="text-center">© 2026 CampusHire | Placement Portal</p>
+
+</div>
+
+</footer>
+
+
+</body>
+</html>

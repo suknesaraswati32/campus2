@@ -1,0 +1,185 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Apply Job</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+<h2>Apply for <%= job.jobTitle %></h2>
+
+<form action="/apply/<%= job._id %>" method="POST">
+
+<div class="mb-3">
+<label>Name</label>
+<input type="text" name="name" class="form-control" required>
+</div>
+
+<div class="mb-3">
+<label>Email</label>
+<input type="email" name="email" class="form-control" required>
+</div>
+
+<div class="mb-3">
+<label>CGPA</label>
+<input type="number" step="0.1" name="cgpa" class="form-control">
+</div>
+
+<div class="mb-3">
+<label>Skills</label>
+<input type="text" name="skills" class="form-control">
+</div>
+
+<button class="btn btn-success w-100">Submit Application</button>
+
+</form>
+
+</div>
+
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Apply Job</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+
+<style>
+  body {
+    background: #f8fafc;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .apply-card {
+    max-width: 700px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+
+  /* ✅ Skyblue Button */
+  .btn-skyblue {
+    background-color: #38bdf8;
+    color: white;
+    border: none;
+    border-radius: 10px;
+  }
+
+  .btn-skyblue:hover {
+    background-color: #0ea5e9;
+    color: white;
+  }
+
+  .section-title {
+    font-weight: 600;
+    margin-top: 20px;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+<div class="apply-card">
+
+<!-- ✅ JOB INFO -->
+<h2>Apply for <%= job.jobTitle %></h2>
+
+<p class="text-muted">
+Please fill all details carefully before submitting your application.
+Make sure your resume and information are accurate.
+</p>
+
+<hr>
+
+<!-- <form action="/apply/<%= job._id %>" method="POST" enctype="multipart/form-data"> -->
+  <form action="/apply/<%= job._id %>" method="POST" enctype="multipart/form-data">
+
+<!-- 👤 PERSONAL INFO -->
+<h5 class="section-title">Personal Details</h5>
+
+<div class="mb-3">
+<label>Name</label>
+<input type="text" name="name" class="form-control" required>
+</div>
+
+<div class="mb-3">
+<label>Email</label>
+<input type="email" name="email" class="form-control" required>
+</div>
+
+<!-- 🎓 EDUCATION -->
+<h5 class="section-title">Education Details</h5>
+
+<div class="mb-3">
+<label>12th Percentage</label>
+<input type="number" name="twelfthMarks" class="form-control" placeholder="e.g. 85">
+</div>
+
+<div class="mb-3">
+<label>Degree Course</label>
+<input type="text" name="degree" class="form-control" placeholder="e.g. B.Tech CSE">
+</div>
+
+<div class="mb-3">
+<label>College Name</label>
+<input type="text" name="college" class="form-control">
+</div>
+
+<div class="mb-3">
+<label>Current CGPA</label>
+<input type="number" step="0.1" name="cgpa" class="form-control">
+</div>
+
+<!-- 💻 SKILLS -->
+<h5 class="section-title">Skills</h5>
+
+<div class="mb-3">
+<label>Skills</label>
+<input type="text" name="skills" class="form-control" placeholder="e.g. Java, Python, React">
+</div>
+
+<!-- 📄 RESUME -->
+<h5 class="section-title">Resume</h5>
+
+<div class="mb-3">
+  <label>Upload Resume</label>
+  <input type="file" name="resume" class="form-control" required>
+</div>
+
+<!-- 📝 COVER LETTER -->
+<h5 class="section-title">Cover Letter</h5>
+
+<div class="mb-3">
+<textarea name="coverLetter" class="form-control" rows="4"
+placeholder="Write why you are suitable for this job..."></textarea>
+</div>
+
+<!-- ✅ SUBMIT -->
+<button class="btn btn-skyblue w-100 mt-3">
+Submit Application
+</button>
+
+
+</div>
+
+</div>
+
+</body>
+</html>
