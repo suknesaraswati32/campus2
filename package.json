@@ -1,30 +1,13 @@
 {
-  "name": "server",
+  "name": "campus",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
-    "bcrypt": "^6.0.0",
-    "bcryptjs": "^3.0.3",
-    "cors": "^2.8.6",
-    "dotenv": "^17.3.1",
-    "ejs": "^5.0.1",
-    "express": "^5.2.1",
-    "express-session": "^1.19.0",
-    "jsonwebtoken": "^9.0.3",
-    "method-override": "^3.0.0",
-    "mongoose": "^9.2.4",
-    "multer": "^2.1.1"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.14"
-  }
+  "type": "commonjs"
 }
